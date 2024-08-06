@@ -1,5 +1,4 @@
-            /*
-             * ScaleRaphael 0.8 by Zevan Rosser 2010 
+ /* * ScaleRaphael 0.8 by Zevan Rosser 2010 
              * For use with Raphael library : www.raphaeljs.com
              * Licensed under the MIT license.
              *
@@ -38,12 +37,14 @@
                   var ratioW = w / width;
                   var ratioH = h / height;
                   var scale = ratioW < ratioH ? ratioW : ratioH;
+
                   
                   var link = document.createElement("link");
                   link.rel = "stylesheet";
-                  link.href = "styles.css";
-                  
-                  document.head.appendChild(link);
+                  link.href = "main.css";
+
+                    // Append it to the head
+                    document.head.appendChild(link);
 
                   var newHeight = parseInt(height * scale);
                   var newWidth = parseInt(width * scale);
@@ -523,10 +524,10 @@ var usMap = {
     }
 };
 
-var vol_states = ['al', 'ca', 'co', 'fl', 'ga', 'id', 'il', 'in', 'ks', 'me', 'md', 'ma', 'mi', 'oh', 'pa', 'tx', 'va'];
+var vol_states = ['al', 'ca', 'co', 'fl', 'ga', 'id', 'il', 'in', 'ks', 'me', 'md', 'ma', 'mi', 'oh', 'pa', 'va'];
 var ballot_states = ['tn', 'la'];
 var petition_states = ['mn', 'de', 'dc', 'ia', 'ky'];
-var write_states = ['az', 'ct'];
+var write_states = ['az', 'ct','tx'];
 var dead_states = ['ak', 'ok', 'ar', 'hi']
 
 // draw map
@@ -545,6 +546,12 @@ var attr = {
     };
 var usRaphael = {};
 
+//draw map and store Raphael paths
+for (var state in usMap) {
+ // if (window.CP.shouldStopExecution(51)) {
+ //       break;
+ //   }
+  
     // color ballot states blue
     if ($.inArray(state, ballot_states) > -1) {
         attr.fill = '#1976D2'; //blue
@@ -717,7 +724,7 @@ var usRaphael = {};
         window.location.href = state_url + this.data("state").toUpperCase();
     });
 
-    if (typeof usMap[state].text.hide !== 'undefined' && usMap[state].text.hide === true) {
+    if (typeof usMap[state].text.hide !== 'undefined' && usMap[state].text.hide === true)
         usRaphael['label'][state].remove();
 }
 
