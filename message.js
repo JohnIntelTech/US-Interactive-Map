@@ -37,7 +37,7 @@
                   
                   var ratioW = w / width;
                   var ratioH = h / height;
-                  var scale = ratioW < ratioH ? ratioW : ratioH;\
+                  var scale = ratioW < ratioH ? ratioW : ratioH;
 
                   
                   var link = document.createElement("link");
