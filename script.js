@@ -39,6 +39,12 @@
                   var ratioH = h / height;
                   var scale = ratioW < ratioH ? ratioW : ratioH;
                   
+                  var link = document.createElement("link");
+                  link.rel = "stylesheet";
+                  link.href = "styles.css";
+                  
+                  document.head.appendChild(link);
+
                   var newHeight = parseInt(height * scale);
                   var newWidth = parseInt(width * scale);
                   
