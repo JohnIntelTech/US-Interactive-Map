@@ -545,12 +545,6 @@ var attr = {
     };
 var usRaphael = {};
 
-//draw map and store Raphael paths
-for (var state in usMap) {
-  if (window.CP.shouldStopExecution(51)) {
-        break;
-    }
-  
     // color ballot states blue
     if ($.inArray(state, ballot_states) > -1) {
         attr.fill = '#1976D2'; //blue
