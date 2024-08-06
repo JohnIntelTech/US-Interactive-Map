@@ -717,7 +717,7 @@ var usRaphael = {};
         window.location.href = state_url + this.data("state").toUpperCase();
     });
 
-    if (typeof usMap[state].text.hide !== 'undefined' && usMap[state].text.hide === true)
+    if (typeof usMap[state].text.hide !== 'undefined' && usMap[state].text.hide === true) {
         usRaphael['label'][state].remove();
 }
 
