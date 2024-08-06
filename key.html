@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Key with Circles</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Optional background color for better visibility */
+        }
+        .key-container {
+            text-align: center;
+        }
         .key-item {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 10px;
+            font-size: 16px;
         }
         .circle {
             width: 20px;
@@ -19,29 +32,31 @@
     </style>
 </head>
 <body>
-    <div class="key-item">
-        <div class="circle" style="background-color: #1976D2;"></div>
-        <span>On ballot</span>
-    </div>
-    <div class="key-item">
-        <div class="circle" style="background-color: #689F38;"></div>
-        <span>Petition circulating</span>
-    </div>
-    <div class="key-item">
-        <div class="circle" style="background-color: #AFB42B;"></div>
-        <span>Volunteers needed</span>
-    </div>
-    <div class="key-item">
-        <div class="circle" style="background-color: #5E35B1;"></div>
-        <span>Write-in access only</span>
-    </div>
-    <div class="key-item">
-        <div class="circle" style="background-color: #444444;"></div>
-        <span>No ballot access</span>
-    </div>
-    <div class="key-item">
-        <div class="circle" style="background-color: #d3d3d3;"></div>
-        <span>Unclear</span>
+    <div class="key-container">
+        <div class="key-item">
+            <div class="circle" style="background-color: #1976D2;"></div>
+            <span>On ballot</span>
+        </div>
+        <div class="key-item">
+            <div class="circle" style="background-color: #689F38;"></div>
+            <span>Petition circulating</span>
+        </div>
+        <div class="key-item">
+            <div class="circle" style="background-color: #AFB42B;"></div>
+            <span>Volunteers needed</span>
+        </div>
+        <div class="key-item">
+            <div class="circle" style="background-color: #5E35B1;"></div>
+            <span>Write-in access only</span>
+        </div>
+        <div class="key-item">
+            <div class="circle" style="background-color: #444444;"></div>
+            <span>No ballot access</span>
+        </div>
+        <div class="key-item">
+            <div class="circle" style="background-color: #d3d3d3;"></div>
+            <span>Unclear</span>
+        </div>
     </div>
 </body>
 </html>
