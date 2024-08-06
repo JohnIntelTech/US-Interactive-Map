@@ -37,8 +37,16 @@
                   
                   var ratioW = w / width;
                   var ratioH = h / height;
-                  var scale = ratioW < ratioH ? ratioW : ratioH;
+                  var scale = ratioW < ratioH ? ratioW : ratioH;\
+
                   
+                  var link = document.createElement("link");
+                  link.rel = "stylesheet";
+                  link.href = "main.css";
+
+                    // Append it to the head
+                    document.head.appendChild(link);
+
                   var newHeight = parseInt(height * scale);
                   var newWidth = parseInt(width * scale);
                   
@@ -711,10 +719,10 @@ for (var state in usMap) {
 
     // bind click
     usRaphael[state].click(function() {
-        window.location = state_url + this.data("state").toUpperCase();
+        window.location.href = state_url + this.data("state").toUpperCase();
     });
     usRaphael['label'][state].click(function() {
-        window.location = state_url + this.data("state").toUpperCase();
+        window.location.href = state_url + this.data("state").toUpperCase();
     });
 
     if (typeof usMap[state].text.hide !== 'undefined' && usMap[state].text.hide === true)
