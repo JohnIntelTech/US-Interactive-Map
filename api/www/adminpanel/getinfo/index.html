@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/static/index.BRkboQQ4.css"
+    />
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:url" content="https://url/adminpanel/getinfo" />
+    <title>Untitled</title>
+    <meta property="og:title" content="Untitled" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body class="w-body">
+    <h1 class="w-heading">GET Info</h1>
+    <div class="w-box">
+      <div class="w-text">
+        <span class="w-text"
+          ><button type="submit" class="w-button" onclick="handleGet()">Get General User Info</button
+          ><span class="w-text"
+            >GET info that is automatically grabbed and sent to client when the
+            user visits the page. Endpoint: /lae/v1/mapinfo</span
+          ></span
+        >
+      </div>
+    </div>
+    <h1 class="w-heading">!!Warning!! Raw data is for debug purposes!!</h1>
+    <div class="w-box">
+      <div class="w-text">
+        <span class="w-text"
+          ><button type="submit" class="w-button" onclick="handleGetRaw()">Get Raw Data</button
+          ><span class="w-text"
+            >GET info from the .csv (raw data) Endpoint:
+            /lae/v1/admin/mapcsv/raw</span
+          ></span
+        >
+      </div>
+    </div>
+    <div class="w-box">
+      <input
+        id="authToken"
+        required=""
+        placeholder="Authenthication key (REQUIRED)"
+        class="w-text-input c1l85a4r c1ny0hgt c14iufwl c12qc1el cb8yqka c1cbb2"
+        type="password"
+      />
+      <div class="w-text">Authenthication key REQUIRED for raw data ONLY</div>
+    </div>
+    <br><br><br><br>
+    <h1>Response</h1>
+    <hr>
+    <div id="responseDiv" class="w-text"></div>
+  <script src="/adminpanel/api-requests.js"></script>
+  </body>
+</html>

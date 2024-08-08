@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/static/index.BRkboQQ4.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:url" content="https://url/adminpanel/deleteinfo" />
+    <title>Untitled</title>
+    <meta property="og:title" content="Untitled" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body class="w-body">
+    <div class="w-box">
+      <h1 class="w-heading">DELETE Info<br />Delete information</h1>
+      <div class="w-box">
+        <input
+          id="authToken"
+          required=""
+          placeholder="Authenthication key (REQUIRED)"
+          class="w-text-input c1l85a4r c1ny0hgt c14iufwl c12qc1el cb8yqka c1cbb2 c18kcksy c1f9r9xc c135sqbf clg1p40 cd8sq36"
+          type="password"
+        /><input
+          id="state"
+          placeholder="Two letter state code"
+          class="w-text-input c18kcksy"
+          type="text"
+        />
+        <div class="w-text">
+          <span class="w-text"
+            >Auth key REQUIRED, Two letter state code must be lowercase OR
+            ERRORS WILL HAPPEN!!</span
+          >
+        </div>
+        <input
+          id="id"
+          placeholder="Key ID (1-6)"
+          class="w-text-input c18kcksy"
+          type="text"
+        />
+        <div class="w-html-embed">
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              margin: 0;
+              background-color: #f0f0f0; /* Optional background color for better visibility */
+            }
+            .container {
+              text-align: center; /* Center the heading and key container */
+            }
+            .key-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+              gap: 20px; /* Space between items */
+            }
+            .key-item {
+              display: flex;
+              align-items: center;
+              gap: 10px; /* Space between circle and text */
+              font-size: 16px;
+            }
+            .circle {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+            }
+          </style>
+          <div class="container">
+            <h3>Key</h3>
+            <div class="key-container">
+              <div class="key-item">
+                <div class="circle" style="background-color: #1976d2"></div>
+                <span>1 - On ballot</span>
+              </div>
+              <div class="key-item">
+                <div class="circle" style="background-color: #689f38"></div>
+                <span>2 - Petition circulating</span>
+              </div>
+              <div class="key-item">
+                <div class="circle" style="background-color: #afb42b"></div>
+                <span>3 - Volunteers needed</span>
+              </div>
+              <div class="key-item">
+                <div class="circle" style="background-color: #5e35b1"></div>
+                <span>4 - Write-in access only</span>
+              </div>
+              <div class="key-item">
+                <div class="circle" style="background-color: #444444"></div>
+                <span>5 - No ballot access</span>
+              </div>
+              <div class="key-item">
+                <div class="circle" style="background-color: #d3d3d3"></div>
+                <span>6 - Unclear</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="w-button" onclick="handleDelete()">DELETE to API</button>
+      <button onclick="handleDelete()">DELETE to API 2</button>
+      <div class="w-text">
+        This will DELETE your changes on the API. Result should be somewhere
+        below. Endpoint: /lae/v1/admin/mapcsv
+      </div>
+    </div>
+   <!-- <script
+      src="/assets/entries/entry-server-routing.9Bn0L_4N.js"
+      type="module"
+      async
+    ></script>
+    <link
+      rel="modulepreload"
+      href="/assets/entries/pages_adminpanel_deleteinfo.BWvwdccb.js"
+      as="script"
+      type="text/javascript"
+    /><link
+      rel="modulepreload"
+      href="/assets/chunks/chunk-BR8bEaM_.js"
+      as="script"
+      type="text/javascript"
+    />-->
+   <script src="/adminpanel/api-requests.js"></script>
+  </body>
+</html>
